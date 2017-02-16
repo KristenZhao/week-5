@@ -184,22 +184,23 @@ $(document).ready(function() {
   // Task 2:
   $('#text-input1').val('Pottruck');
   $('#text-input2').val('orange chicken and bread');
-  $("#numeric2").val("39.3456567");
-  $("#numeric-input").val('5');
+  $("#numeric2").val("39.954158");
+  $("#numeric-input").val('-75.196901');
   $('#cbox-input1').prop('checked', true);
   $('#cbox-input2').prop('checked', false);
   //$("#checkbox-label2").prop("checked",true);
   $("#color-input").val("#D2B4DE");
 
   // Task 3:
+  // $('.sidebar').on('change', function(){
   var inputObject = {
-    Input1: $("#text-input1").val(),
-    Input2: $("#text-input2").val(),
-    Input3: $("#numeric2").val(),
-    NumInput: $("#numeric-input").val(),
-    cBox1: $("#cbox-input1").val(),
-    cBox2: $("#cbox-input2").val(),
-    Color: $("#color-input").val(),
+  Input1: $("#text-input1").val(),
+  Input2: $("#text-input2").val(),
+  Input3: $("#numeric2").val(),
+  NumInput: $("#numeric-input").val(),
+  cBox1: $("#cbox-input1").val(),
+  cBox2: $("#cbox-input2").val(),
+  Color: $("#color-input").val(),
   };
   console.log(inputObject);
 
@@ -213,6 +214,9 @@ $(document).ready(function() {
   $("#cbox-input2").prop('disabled',false);
 
   // Task 5:
+  // $('.sidebar').on('change', function(){
+  //   console.log(inputObject);
+  // });
   $("button").click(function(){
     console.log(
       "Input1:", $('#text-input1').val(),'\n'+
@@ -223,8 +227,26 @@ $(document).ready(function() {
       "cBox2:", $('#cbox-input2').val(),'\n'+
       'Color:', $('#color-input').val()
     );
+
+    // Task 6
+    var inputGUI = {
+    Gym : $('#text-input1').val(),
+    Description : $('#text-input2').val(),
+    Latitude: $('#numeric2').val(),
+    Long: $('#numeric-input').val(),
+    cBox1: $('#cbox-input1').val(),
+    cBox2: $('#cbox-input2').val(),
+    Color: $('#color-input').val(),
+    };
+    console.log(inputGUI);
+    var LatLng = L.LatLng(inputGUI.Latitude,inputGUI.Long);
+    L.circleMarker([inputGUI.Latitude,inputGUI.Long], {color:inputGUI.Color,
+      stroke:true, opacity:0.8, fill:true, fillOpacity: 0.5}).addTo(map);
+    // console.log(inputGUI);
   });
 
-  // Task 6:
+
+  // 39.954158, -75.196901
+
 
 });

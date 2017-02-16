@@ -21,3 +21,7 @@ body {
     overflow-y: auto;
     padding: 20px;
 }
+
+.labels {
+  font-family: Verdana, helvatica; 
+}
