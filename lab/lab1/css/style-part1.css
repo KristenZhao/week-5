@@ -6,10 +6,12 @@ body {
 .map {
     background-color: #eee;
     position: absolute;
-    left: 400px;
+    left: 0px;
     right: 0;
     bottom: 0;
-    top: 0;
+    top: 55px;
+    z-index: 2;
+    width: 49.5%;
 }
 
 .sidebar {
@@ -17,14 +19,19 @@ body {
                          a lot of content in it */
     background-color: #ccc;
     position: absolute;
-    left: 0;
-    width: 400px;
+    right:0;
+    width: 49.5%;
     bottom: 0;
-    top: 0;
+    top: 55px;
+    z-index: 3;
 }
 
 .header {
   background-color: #000;
   color: #fff;
   position: absolute;
+  top:0;
+  height:50px;
+  width: 100%;
+  z-index: 20;
 }

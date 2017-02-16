@@ -170,4 +170,61 @@ var Stamen_TonerLite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/ton
 // been interpreted. It is, therefore, an example of asynchronous behavior.
 $(document).ready(function() {
   // Do your stuff here
+  // Task 1:
+  $('h1#main-heading').text('Where\'d go?');
+  $('#text-label1').text("Favorite Gym");
+  $('#text-label2').text("Describe Why");
+  $("#number-label2").text("Latitude");
+  $("#number-label").text("Longitude");
+  $("#checkbox-label1").text('Are you happy?');
+  $("#checkbox-label2").text("Wanna go again?");
+  $("#color-label").text("what is the color of your training shoes?");
+  $("button").text("Let's Go!");
+
+  // Task 2:
+  $('#text-input1').val('Pottruck');
+  $('#text-input2').val('orange chicken and bread');
+  $("#numeric2").val("39.3456567");
+  $("#numeric-input").val('5');
+  $('#cbox-input1').prop('checked', true);
+  $('#cbox-input2').prop('checked', false);
+  //$("#checkbox-label2").prop("checked",true);
+  $("#color-input").val("#D2B4DE");
+
+  // Task 3:
+  var inputObject = {
+    Input1: $("#text-input1").val(),
+    Input2: $("#text-input2").val(),
+    Input3: $("#numeric2").val(),
+    NumInput: $("#numeric-input").val(),
+    cBox1: $("#cbox-input1").val(),
+    cBox2: $("#cbox-input2").val(),
+    Color: $("#color-input").val(),
+  };
+  console.log(inputObject);
+
+  // Task 4:
+  //$('#someInput').prop('disabled', true);
+  $("#text-input1").prop('disabled',false);
+  $("#text-input2").prop('disabled',false);
+  $("#numeric2").prop('disabled',false);
+  $("#numeric-input").prop('disabled',false);
+  $("#cbox-input1").prop("disabled",false);
+  $("#cbox-input2").prop('disabled',false);
+
+  // Task 5:
+  $("button").click(function(){
+    console.log(
+      "Input1:", $('#text-input1').val(),'\n'+
+      "Input2:", $('#text-input2').val(),'\n'+
+      "Input3:", $('#numeric2').val(), '\n'+
+      "NumInput:", $('#numeric-input').val(),'\n'+
+      "cBox1:", $('#cbox-input1').val(),'\n'+
+      "cBox2:", $('#cbox-input2').val(),'\n'+
+      'Color:', $('#color-input').val()
+    );
+  });
+
+  // Task 6:
+
 });
